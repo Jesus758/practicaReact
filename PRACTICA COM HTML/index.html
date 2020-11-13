@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello React</title>
+
+<!--Librerias utilizadas para React dentro de un HTML -->
+    <script src="https://unpkg.com/react@^16/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@16.13.0/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.26.0/babel.js"></script>
+<style>
+img{
+    width: 100px;
+    height: auto;
+}
+
+</style>
+
+</head>
+<body>
+    <div id="root"></div>
+
+<script type="text/babel">
+//esta parte aqui es un componente que va a ser insertado dentro del ROOT
+class App extends React.Component {
+    render() {
+        return (
+        <div id="uno">
+        <h1>
+            HOLA MUNDO!!!!
+        </h1>
+        <img src="https://www.adslzone.net/app/uploads/2019/04/borrar-fondo-imagen.jpg" />
+        </div>
+        )}
+}
+// esta es la parte que le va a dar la informacion al HTML de lo que va a insertar en root.
+
+ReactDOM.render(<App />, document.getElementById('root'))
+
+</script>    
+</body>
+</html>
